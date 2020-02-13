@@ -7,4 +7,10 @@ class Doctor
     @name = name
     @@all << self 
   end 
+  
+  def self.all 
+    @@all.each do |doctor|
+      puts doctor.name
+    end 
+  end 
 end
