@@ -7,6 +7,10 @@ class Genre
   
   @@all = []
   
+  def songs 
+    
+  end
+  
   def self.all 
     @@all.each do |genre|
       puts genre.name 
