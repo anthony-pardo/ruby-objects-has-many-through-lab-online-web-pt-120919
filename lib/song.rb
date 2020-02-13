@@ -13,5 +13,6 @@ class Song
     @@all.each do |song|
       puts song.name
     end 
+    @@all
   end
 end
