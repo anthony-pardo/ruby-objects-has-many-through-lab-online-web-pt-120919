@@ -9,10 +9,12 @@ class Artist
   end
   
   def songs
-    Song.all
+  end
+  
+  def new_song(name, genre)
+    song = Song.new(name, self, genre)
   end
     
-  
   def self.all 
     @@all.each do |artist|
       puts artist.name
