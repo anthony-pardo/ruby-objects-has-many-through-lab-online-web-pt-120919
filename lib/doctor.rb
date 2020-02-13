@@ -8,9 +8,15 @@ class Doctor
     @@all << self 
   end 
   
+  def new_appointment(patient, date)
+    appointment = Appointment.new()
+  end
+  
   def self.all 
     @@all.each do |doctor|
       puts doctor.name
     end 
   end 
+  
+  
 end
