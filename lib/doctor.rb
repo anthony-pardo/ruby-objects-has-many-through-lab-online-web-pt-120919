@@ -13,7 +13,15 @@ class Doctor
   end
   
   def appointments 
-    Appointment.all
+    Appointment.all.select{|appointment| appointment.doctor == self}
+  end
+  
+  def patients 
+    patients = []
+    self.appointments.each do |appointment|
+      patients << appointment.patient 
+    end 
+    patients
   end
   
   def self.all 
