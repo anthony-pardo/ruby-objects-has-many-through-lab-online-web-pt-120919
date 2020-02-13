@@ -21,13 +21,13 @@ class Patient
     doctors
   end
   
+  def appointments
+    Appointment.all.select{|appointment| appointment.patient == self}
+  end
+  
   def self.all 
     @@all.each do |patient|
       puts patient.name 
     end 
-  end
-  
-  def self.appointments
-    Appointment.all.select{|appointment| appointment.patient == self}
   end
 end
