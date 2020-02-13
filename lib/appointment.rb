@@ -10,4 +10,9 @@ class Appointment
     @@all << self 
   end
     
+  def self.all 
+    @@all.each do |appointment|
+      puts appointment 
+    end 
+  end
 end
